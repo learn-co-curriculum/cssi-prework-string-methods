@@ -18,7 +18,7 @@ The `print()` method will display a string in your command prompt. This is great
 hello, world
 ```
 
-#User Input
+##User Input
 In Python, if you want to get text from a user, you can use the raw_input()/input() function, depending on your Python version.
 To check your version, just type `python --version` into the command line. You will get something like 'Python 3.X.X or Python 2.X.X'
 * input() is for Python version 3 and higher
@@ -32,7 +32,7 @@ Who are you? Joseph
 ```
 
 
-#String Concatenation
+##String Concatenation
 Concatenation (joining strings together) is one of those things that might seem intuitive to a human but needs to be spelled out explicitly for the computer. For instance, when I run the code below, I will get `onetwo`.
 
 ```python
@@ -47,7 +47,7 @@ TypeError: cannot concatenate 'str' and 'int' objects
 ```
 
 
-#Substrings
+##Substrings
 A substring is a part of a string.  To get a substring from a string, use square brackets and specify the range of characters that you want from the string. Just like in Javascript, string characters are indexed starting at 0.
 
 Grabbing a specific character:
@@ -74,7 +74,7 @@ erfluous
 >>> print old_str[:5] # From the beginning to character position 4
 super
 ```
-#String Length
+##String Length
 
 Python gives us the len() function to determine a string's length.
 ```python
@@ -86,8 +86,12 @@ Python gives us the len() function to determine a string's length.
 89
 ```
 
-#Replace Function
-To replace one string with anohter, use the `replace()` method. `str.replace` takes two `parameters`. The first one is the word you want to replace, and the second one is the word you want to replace it with.
+##Replace Function
+The `replace()` method is a handy Python tool that allows you to substitute a word or letter for another word or letter within a string. That means *every time the word or letter appears in the string, it will be substituted out.* 
+
+This method takes two `parameters`. The first one is the word you want to replace, and the second one is the word you want to replace it with.
+
+
 ```python
 >>> old_str = 'superfly'
 >>> new_str = old_str.replace('super', 'SUPA')
