@@ -85,6 +85,17 @@ Python gives us the len() function to determine a string's length.
 >>> len(long_string)
 89
 ```
+## Split
+The split function, `split()` divides a string into smaller parts. The method's default is to divde on whitespace, but other separators can be includes as an argument. 
+```python
+>>> words="This is a sentence".split()
+>>> words
+['This', 'is', 'a', 'sentence']
+
+>>> ingredients="jelly, peanut butter, bread".split(',')
+>>> ingredients
+['jelly', ' peanut butter', ' bread']
+```
 
 ##Replace Function
 The `replace()` method is a handy Python tool that allows you to substitute a word or letter for another word or letter within a string. That means *every time the word or letter appears in the string, it will be substituted out.* 
@@ -99,7 +110,7 @@ This method takes two `parameters`. The first one is the word you want to replac
 SUPAfly
 ```
 
-# Lower and Upper Function
+## Lower and Upper Function
 lower() and upper() make strings lowercase and uppercase respectively.
 ```python
 >>> old_str = 'Seattle Seahawks'
@@ -109,20 +120,20 @@ seattle seahawks
 SEATTLE SEAHAWKS!!!
 ```
 
-#Strip Function
+## Strip Function
 The strip() function removes leading and trailing white space.
 ```python
 >>>print '     spaces everywhere     '.strip()
 spaces everywhere
 ```
 
-#String Formatting and Interpolation
+## String Formatting and Interpolation
 String interpolation lets us pass different data into a string, which is faster and more convenient than keeping track of different pieces of string and concatenating them ourselves. There are two ways to do string interpolation. With the .format method and with the %s. Let's take a look at the difference.
 
-## Interpolation with ***.format***
+### Interpolation with ***.format***
 This is the newer version of using variables within string in Python. The method `.format()` is chained to the end of a string. The arguments of `.format()` are substituted into the placeholders of the string. The placeholders start and end with curly brackets. The placeholders can contain a named variable, a number, or nothing at all.
 
-###Keyword Variables
+#### Keyword Variables
 For readability, keyword variables generally make the most sense in interpolation placeholders. In the example below, the string has one keyword argument, 'reading_materials', which is assigned to a global variable, 'magazine'.
 ```python
 >>>magazine = "The Atlantic"
@@ -134,7 +145,7 @@ The hobby example uses two keyword arguments: 'name' and 'hobby', which are assi
 >>>print "{name} is the best at {hobby}".format(name='Charlie', hobby='playing piano')
 Charlie is the best at playing piano
 ```
-###Positional Variables
+#### Positional Variables
 There is also an option to use positional arguments. The advantage is that this is  a bit shorter to type, but harder for others to interpret.
 ```python
 >>>print "There are {0} students at CSSI in {1}!".format(30, "New York")
@@ -147,7 +158,7 @@ You could also not include any value in the placeholder and achieve the same eff
 There are 28 students at CSSI in Cambridge!
 ```
 
-##String Interpolation with ***%s***
+### String Interpolation with ***%s***
 The older way to use variables in strings and uses the % operator.
 
 Again the whole string is in quotes. The placeholder for the variable is a percent sign and the first letter of the datatype. (%d int, %s string, %f/%g float). The entire string is followed by a percent sign and the name of the variable
