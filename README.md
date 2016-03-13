@@ -87,7 +87,7 @@ Python gives us the len() function to determine a string's length.
 ```
 
 #Replace Function
-Replace() replaces a substring of a string with another substring.
+To replace one string with anohter, use the `replace()` method. `str.replace` takes two `parameters`. The first one is the word you want to replace, and the second one is the word you want to replace it with.
 ```python
 >>> old_str = 'superfly'
 >>> new_str = old_str.replace('super', 'SUPA')
