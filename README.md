@@ -24,13 +24,24 @@ To check your version, just type `python --version` into the command line. You w
 * input() is for Python version 3 and higher
 * raw_input is for Python versions lower than 3
 Let's try it out!
+For python 3+:
+
 ```python
 >>> name = input('Who are you? ')
-Who are you? Joseph
+Who are you? Sergey
 >>> name
-'Joseph'
+'Sergey'
 ```
 
+Python 2+:
+```python
+>>> name = raw_input('What is your name?')
+What is your name? Larry
+>>> name
+'Larry'
+```
+
+Mini Challenge: See if you can write a short Python script that prompts a user for their name, their age, and their favorite food, and then returns a string combining this information.
 
 ##String Concatenation
 Concatenation (joining strings together) is one of those things that might seem intuitive to a human but needs to be spelled out explicitly for the computer. For instance, when I run the code below, I will get `onetwo`.
@@ -38,6 +49,7 @@ Concatenation (joining strings together) is one of those things that might seem 
 ```python
 new_str = 'one' + 'two'
 print new_str
+=> onetwo
 ```
 Python doesn't add anything extra - if you want a space between your words, you need to put it there!
 
@@ -46,37 +58,41 @@ When you try to concatenate a string with a datatype other than another string y
 TypeError: cannot concatenate 'str' and 'int' objects
 ```
 
-
 ##Substrings
 A substring is a part of a string.  To get a substring from a string, use square brackets and specify the range of characters that you want from the string. Just like in Javascript, string characters are indexed starting at 0.
 
 Grabbing a specific character:
 ```python
 >>> old_str = 'superfly'
->>> print old_str[0]
-s
+>>> old_str[0]
+"s"
+>>> print old_str[3]
+"e"
 ```
 
 Grabbing a substring of a range of characters:
 ```python
 >>> old_str = 'superfly'
 >>> print old_str[0:4]
-su
+'supe'
 ```
 As you might be able to guess, the selection works like this:
 ```python
 <string>[<first character position>: <last character position +1>]
 ```
 Here are a couple handy shortcuts for selecting particular parts of strings:
+
 ```python
->>> print old_str[3:] # character position 3 to the end
-erfluous
->>> print old_str[:5] # From the beginning to character position 4
-super
+new_str = "superfluous"
+>>> new_str[3:] # character position 3 to the end
+'erfluous'
+>>> new_str[:5] # From the beginning to character position 4
+'super'
 ```
 ##String Length
 
-Python gives us the len() function to determine a string's length.
+Python gives us the len() function to determine a string's length. The `len()` function will count the number of characters in the string, including spaces and newline characters"
+
 ```python
 >>> short_string = "o"
 >>> long_string = "(pumba) When I was a young warthog… (timon) When he was a young waaarthoooooooooooooog!"
@@ -86,13 +102,13 @@ Python gives us the len() function to determine a string's length.
 89
 ```
 ## Split
-The split function, `split()` divides a string into smaller parts. The method's default is to divde on whitespace, but other separators can be includes as an argument. 
+The split function, `split()` divides a string into smaller parts. The method's default is to divde on whitespace, but other separators can be included as an argument. 
 ```python
->>> words="This is a sentence".split()
+>>> words="This is a sentence".split() #since there is no argument, we are splitting on whitespace.
 >>> words
 ['This', 'is', 'a', 'sentence']
 
->>> ingredients="jelly, peanut butter, bread".split(',')
+>>> ingredients="jelly, peanut butter, bread".split(',') # we are using a comma as the divider here.
 >>> ingredients
 ['jelly', ' peanut butter', ' bread']
 ```
@@ -104,14 +120,16 @@ This method takes two `parameters`. The first one is the word you want to replac
 
 
 ```python
->>> old_str = 'superfly'
->>> new_str = old_str.replace('super', 'SUPA')
->>> print new_str
-SUPAfly
+>>> pygmalion = 'the rayn in Spayn stays maynly in the playn'
+>>> new_pygmalion = pygmalion.replace('ayn', 'ain')
+>>> new_pygmalion
+'the rain in Spain stays mainly in the plain'
 ```
+
 
 ## Lower and Upper Function
 lower() and upper() make strings lowercase and uppercase respectively.
+
 ```python
 >>> old_str = 'Seattle Seahawks'
 >>> print  old_str.lower()
@@ -123,8 +141,8 @@ SEATTLE SEAHAWKS!!!
 ## Strip Function
 The strip() function removes leading and trailing white space.
 ```python
->>>print '     spaces everywhere     '.strip()
-spaces everywhere
+>>>'     spaces everywhere     '.strip()
+'spaces everywhere'
 ```
 
 ## String Formatting and Interpolation
