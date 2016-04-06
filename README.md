@@ -3,11 +3,11 @@
 Let's explore how to use some string methods in Python to modify or gain information about strings.
 
 #Objectives:
-+ Understand the syntax of strings in Python
-+ How to get data from the user
-+ How to concatenate strings
-+ How to interpolate with str.format()
-+ Understand style guide and escape characters
++ Describe the syntax of strings in Python
++ Get data from the user
++ Concatenate strings
++ Interpolate with str.format()
++ Explain style guide and escape characters
 
 
 ##Printing Strings
@@ -19,10 +19,10 @@ hello, world
 ```
 
 ##User Input
-In Python, if you want to get text from a user, you can use the raw_input()/input() function, depending on your Python version.
+In Python, if you want to get text from a user, you can use the raw_input() or input() function, depending on your Python version.
 To check your version, just type `python --version` into the command line. You will get something like 'Python 3.X.X or Python 2.X.X'
 * input() is for Python version 3 and higher
-* raw_input is for Python versions lower than 3
+* raw_input() is for Python versions lower than 3
 Let's try it out!
 For python 3+:
 
@@ -44,7 +44,7 @@ What is your name? Larry
 Mini Challenge: See if you can write a short Python script that prompts a user for their name, their age, and their favorite food, and then returns a string combining this information.
 
 ##String Concatenation
-Concatenation (joining strings together) is one of those things that might seem intuitive to a human but needs to be spelled out explicitly for the computer. For instance, when I run the code below, I will get `onetwo`.
+Concatenation (joining strings together) is one of those things that might seem intuitive to a human but needs to be spelled out explicitly for the computer. For instance, when we run the code below, we will get `onetwo`.
 
 ```python
 new_str = 'one' + 'two'
@@ -102,7 +102,7 @@ Python gives us the len() function to determine a string's length. The `len()` f
 89
 ```
 ## Split
-The split function, `split()` divides a string into smaller parts. The method's default is to divde on whitespace, but other separators can be included as an argument. 
+The split function, `split()` divides a string into smaller parts. The method's default is to divide on whitespace, but other separators can be included as an argument. 
 ```python
 >>> words="This is a sentence".split() #since there is no argument, we are splitting on whitespace.
 >>> words
