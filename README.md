@@ -43,6 +43,20 @@ What is your name? Larry
 
 Mini Challenge: See if you can write a short Python script that prompts a user for their name, their age, and their favorite food, and then returns a string combining this information.
 
+```python
+name = raw_input('What is your name?')
+age = raw_input('What is your age?')
+favorite_food = raw_input('What is your favorite food?')
+sentence = "Hello, " + name + ", you're " + age + " years old, and your favorite food is " + favorite_food + "."
+print(sentence)
+
+>> What is your name? Danny
+>> What is your age? 30
+>> What is your favorite food? Lasagna
+>> "Hello Danny, you're 30 years old, and your favorite food is Lasagna."
+
+```
+
 ##String Concatenation
 Concatenation (joining strings together) is one of those things that might seem intuitive to a human but needs to be spelled out explicitly for the computer. For instance, when we run the code below, we will get `onetwo`.
 
