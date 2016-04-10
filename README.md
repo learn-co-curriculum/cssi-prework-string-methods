@@ -161,4 +161,5 @@ The strip() function removes leading and trailing white space.
 
 
 # Conclusion
-There are a lot of string methods that we can access in Python. Whenever you don't remember if one exists, or the syntax, you can always look up the documentation.
+There are a lot of string methods that we can access in Python. Whenever you don't remember if one exists, or the syntax, you can always look up [the documentation](https://docs.python.org/2/library/string.html).
+
