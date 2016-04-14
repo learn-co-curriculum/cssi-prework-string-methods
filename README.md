@@ -69,7 +69,13 @@ Python doesn't add anything extra - if you want a space between your words, you 
 
 When you try to concatenate a string with a datatype other than another string you will get an error.
 ```
+new_str2 = "I am " + 30 + " years old"
 TypeError: cannot concatenate 'str' and 'int' objects
+```
+To convert an integer into a string, use "typecasting":
+```
+new_str2 = "I am " + str(30) +" years old"
+"I am 30 years old"
 ```
 
 ##Substrings
